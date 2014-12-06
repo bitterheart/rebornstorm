@@ -21,9 +21,12 @@
             pkg: grunt.file.readJSON("package.json"),
             eslint: {
                 target: ["Gruntfile.js"]
+            },
+            express:{
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
+        grunt.loadNpmTasks("grunt-express");
         grunt.registerTask("default", []);
     };
 }());
