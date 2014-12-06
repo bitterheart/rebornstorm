@@ -35,6 +35,6 @@
     "express": "4.10.4"
   },
     "scripts": {
-        "postinstall" : "node_modules/bower/bin/bower install && node_modules/protractor/bin/webdriver-manager update --standalone && unzip protractor-master.zip && mv protractor-master node_modules/protractor"
+        "postinstall" : "node_modules/bower/bin/bower install && node_modules/protractor/bin/webdriver-manager update --standalone && wget https://github.com/angular/protractor/archive/master.zip && unzip protractor-master.zip && mv protractor-master node_modules/protractor"
     }
 }

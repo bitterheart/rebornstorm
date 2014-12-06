@@ -14,6 +14,16 @@
   along with rebornstorm.  If not, see <http://www.gnu.org/licenses/>.
 */
 /*eslint-env node*/
+/*
+http://stackoverflow.com/a/22955094/348975
+
+I would like to provide a workaround to use --suite option in protractor.
+
+It was supposed to be in the latest version but it is not shipped yet. To use it, please download the angular/protractor from git (https://github.com/angular/protractor/archive/master.zip) and replace your protractor/* files with these files. You should be able to run the suites option as follows -
+
+>protractor <relative_path_to_config_file> --browser chrome --suite <suite_name>
+I've cross checked it myself, it is working for me.
+*/
 (function(){
     "use strict";
     module.exports = function(grunt) {
