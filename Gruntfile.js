@@ -20,7 +20,7 @@
         grunt.initConfig({
             pkg: grunt.file.readJSON("package.json"),
             eslint: {
-                target: ["Gruntfile.js"]
+                target: ["Gruntfile.js", "server/application.js"]
             },
             express: {
             },
