@@ -27,6 +27,8 @@
     "grunt-cli": "0.1.13",
     "grunt-eslint": "2.1.0",
     "grunt-express": "1.4.1",
-    "grunt-protractor-runner": "1.1.4"
+    "protractor": "~1.4.0",
+    "grunt-protractor-runner": "1.1.4",
+    "grunt-protractor-webdriver": "0.2.0"
   }
 }
