@@ -32,7 +32,7 @@
                 local: {
                     options: {
                         port: 29101,
-                        bases: "client",
+                        bases: ".",
                         server: "server/application.js"
                     }
                 }
