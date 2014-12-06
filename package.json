@@ -23,6 +23,6 @@
     "url": "https://github.com/bitterheart/rebornstorm/issues"
   },
   "devDependencies": {
-    "grunt-cli": "~0.1.13"
+    "grunt-cli": "0.1.13"
   }
 }
