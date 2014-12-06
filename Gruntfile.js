@@ -23,6 +23,12 @@
                 target: ["Gruntfile.js", "server/application.js"]
             },
             express: {
+                test: {
+                    options: {
+                        port: 20495,
+                        server: "server/application.js"
+                    }
+                }
             },
             "protractor_webdriver": {
             }
@@ -30,6 +36,6 @@
         grunt.loadNpmTasks("grunt-eslint");
         grunt.loadNpmTasks("grunt-express");
         grunt.loadNpmTasks("grunt-protractor-webdriver");
-        grunt.registerTask("default", []);
+        grunt.registerTask("default", ["express:test", "express-keepalive"]);
     };
 }());
