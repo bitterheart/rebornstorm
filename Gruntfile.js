@@ -45,7 +45,8 @@
                 local: {
                     options: {
                         configFile: "",
-                        debug: true
+                        debug: true,
+                        suite: "full"
                     }
                 }
             }
