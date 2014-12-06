@@ -13,11 +13,17 @@
   You should have received a copy of the GNU General Public License
   along with rebornstorm.  If not, see <http://www.gnu.org/licenses/>.
 */
+/*eslint-env node*/
 (function(){
+    "use strict";
     module.exports = function(grunt) {
         grunt.initConfig({
-            pkg: grunt.file.readJSON('package.json'),
+            pkg: grunt.file.readJSON("package.json"),
+            eslint: {
+                target: ["Gruntfile.js"]
+            }
         });
-        grunt.registerTask('default', []);
+        grunt.loadNpmTasks("grunt-eslint");
+        grunt.registerTask("default", []);
     };
 }());
