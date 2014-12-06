@@ -1,24 +1,24 @@
 {
-  "name": "rebornstorm",
-  "version": "0.0.0",
-  "description": "An Application for Victor",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/bitterheart/rebornstorm.git"
-  },
-  "keywords": [
-    "angular",
-    "karma",
-    "protractor",
-    "firebase"
-  ],
-  "author": "Emory Merryman",
-  "license": "GPL3",
-  "bugs": {
-    "url": "https://github.com/bitterheart/rebornstorm/issues"
-  }
+    "name": "rebornstorm",
+    "version": "0.0.0",
+    "description": "An Application for Victor",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/bitterheart/rebornstorm.git"
+    },
+    "keywords": [
+        "angular",
+        "karma",
+        "protractor",
+        "firebase"
+    ],
+    "author": "Emory Merryman",
+    "license": "GPL3",
+    "bugs": {
+        "url": "https://github.com/bitterheart/rebornstorm/issues"
+    }
 }
