@@ -22,6 +22,12 @@
             eslint: {
                 target: ["Gruntfile.js", "protractor.local.conf.js"]
             },
+            bowerInstall: {
+                target: {
+                    src: "client/index.html",
+                    dependencies: true
+                }
+            },
             express: {
                 local: {
                     options: {
@@ -48,6 +54,7 @@
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
+        grunt.loadNpmTasks("grunt-bower-install");
         grunt.loadNpmTasks("grunt-express");
         grunt.loadNpmTasks("grunt-protractor-webdriver");
         grunt.loadNpmTasks("grunt-protractor-runner");
