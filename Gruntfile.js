@@ -45,7 +45,6 @@
                 local: {
                     options: {
                         configFile: "protractor.local.conf.js",
-                        debug: true,
                         suite: "full"
                     }
                 }
