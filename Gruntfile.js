@@ -23,10 +23,13 @@
                 target: ["Gruntfile.js"]
             },
             express:{
+            },
+            "protractor_webdriver": {
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
         grunt.loadNpmTasks("grunt-express");
+        grunt.loadNpmTasks("grunt-protractor-webdriver");
         grunt.registerTask("default", []);
     };
 }());
