@@ -16,20 +16,7 @@
 /*eslint-env node*/
 (function(){
     "use strict";
-    module.exports = function(grunt) {
-        grunt.initConfig({
-            pkg: grunt.file.readJSON("package.json"),
-            eslint: {
-                target: ["Gruntfile.js", "server/application.js"]
-            },
-            express: {
-            },
-            "protractor_webdriver": {
-            }
-        });
-        grunt.loadNpmTasks("grunt-eslint");
-        grunt.loadNpmTasks("grunt-express");
-        grunt.loadNpmTasks("grunt-protractor-webdriver");
-        grunt.registerTask("default", []);
-    };
+    var express = require("express");
+    var app = express();
+    module.exports = app;
 }());
