@@ -23,6 +23,8 @@
                 target: ["Gruntfile.js"]
             },
             express:{
+                test:{
+                }
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
