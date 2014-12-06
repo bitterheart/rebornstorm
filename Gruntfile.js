@@ -20,16 +20,38 @@
         grunt.initConfig({
             pkg: grunt.file.readJSON("package.json"),
             eslint: {
-                target: ["Gruntfile.js"]
+                target: ["Gruntfile.js", "protractor.local.conf.js"]
             },
             express: {
+                local: {
+                    options: {
+                        port: 29101,
+                        bases: "client",
+                        server: "server/application.js"
+                    }
+                }
             },
             "protractor_webdriver": {
+                local: {
+                    options: {
+                        path: "node_modules/protractor/bin"
+                    }
+                }
+            },
+            protractor: {
+                local: {
+                    options: {
+                        configFile: "",
+                        debug: true
+                    }
+                }
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
         grunt.loadNpmTasks("grunt-express");
         grunt.loadNpmTasks("grunt-protractor-webdriver");
+        grunt.loadNpmTasks("grunt-protractor-runner");
         grunt.registerTask("default", []);
+        grunt.registerTask("e2e:local", ["express:local", "protractor_webdriver:local", "protractor:local"]);
     };
 }());
