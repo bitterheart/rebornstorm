@@ -39,9 +39,6 @@
             },
             "protractor_webdriver": {
                 local: {
-                    options: {
-                        path: "node_modules/protractor/bin"
-                    }
                 }
             },
             protractor: {
