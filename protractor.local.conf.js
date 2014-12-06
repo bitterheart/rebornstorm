@@ -24,9 +24,12 @@
         capabilities: {
             browserName: "chrome"
         },
-        baseUrl: "http://localhost:29101/index.html",
+        baseUrl: "http://localhost:29101",
         allScriptsTimeout: 11000,
         getPageTimeout: 10000,
+        onPrepare: function(){
+            browser.get("client/index.html");
+        },
         framework: "jasmine",
         jasmineNodeOpts: {
             isVerbose: false,
