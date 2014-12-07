@@ -32,7 +32,7 @@
             browser.get("client/index.html");
             var HtmlReporter = require("protractor-html-screenshot-reporter");
             jasmine.getEnv().addReporter(new HtmlReporter({
-                baseDirectory: "/reports/e2e/local/correctness"
+                baseDirectory: "reports/e2e/local/correctness"
             }));
         },
         framework: "jasmine",
