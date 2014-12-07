@@ -41,7 +41,7 @@
                 local: {
                 }
             },
-            protractor: {
+            protractor_coverage: {
                 local: {
                     options: {
                         configFile: "protractor.local.conf.js",
@@ -54,8 +54,8 @@
         grunt.loadNpmTasks("grunt-bower-install");
         grunt.loadNpmTasks("grunt-express");
         grunt.loadNpmTasks("grunt-protractor-webdriver");
-        grunt.loadNpmTasks("grunt-protractor-runner");
+        grunt.loadNpmTasks("grunt-protractor-coverage");
         grunt.registerTask("default", []);
-        grunt.registerTask("e2e:local", ["express:local", "protractor_webdriver:local", "protractor:local"]);
+        grunt.registerTask("e2e:local", ["express:local", "protractor_webdriver:local", "protractor_coverage:local"]);
     };
 }());
