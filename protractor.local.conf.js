@@ -28,6 +28,7 @@
         allScriptsTimeout: 11000,
         getPageTimeout: 10000,
         onPrepare: function(){
+            /*global browser:false*/
             browser.get("client/index.html");
         },
         framework: "jasmine",
