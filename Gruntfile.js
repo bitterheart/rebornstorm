@@ -20,7 +20,7 @@
         grunt.initConfig({
             pkg: grunt.file.readJSON("package.json"),
             eslint: {
-                target: ["Gruntfile.js", "server/application.js"]
+                target: ["Gruntfile.js", "protractor.local.conf.js"]
             },
             bowerInstall: {
                 target: {
@@ -29,14 +29,33 @@
                 }
             },
             express: {
+                local: {
+                    options: {
+                        port: 29101,
+                        bases: "client",
+                        server: "server/application.js"
+                    }
+                }
             },
             "protractor_webdriver": {
+                local: {
+                }
+            },
+            protractor: {
+                local: {
+                    options: {
+                        configFile: "protractor.local.conf.js",
+                        debug: true
+                    }
+                }
             }
         });
         grunt.loadNpmTasks("grunt-eslint");
         grunt.loadNpmTasks("grunt-bower-install");
         grunt.loadNpmTasks("grunt-express");
         grunt.loadNpmTasks("grunt-protractor-webdriver");
+        grunt.loadNpmTasks("grunt-protractor-runner");
         grunt.registerTask("default", []);
+        grunt.registerTask("e2e:local", ["express:local", "protractor_webdriver:local", "protractor:local"]);
     };
 }());
